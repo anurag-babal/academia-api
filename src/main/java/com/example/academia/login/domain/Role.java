@@ -5,6 +5,9 @@ public enum Role {
     ADMIN,
     FACULTY,
     ROLE_FACULTY,
+    ROLE_EMPLOYEE,
+    ROLE_MANAGER,
+    ROLE_ADMIN,
     ACCOUNT,
     NONE
 }

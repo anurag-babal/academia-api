@@ -12,3 +12,10 @@ logging:
     org:
       springframework:
         security: DEBUG
+        jdbc:
+          core: TRACE
+
+academia:
+  jwt:
+    secret: ======================academia=spring===========================
+    expirationInMs: 86400

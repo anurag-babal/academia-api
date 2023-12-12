@@ -1,5 +1,7 @@
 package com.example.academia.login.dto;
 
+import java.util.List;
+
 import lombok.Builder;
 import lombok.Data;
 
@@ -7,6 +9,6 @@ import lombok.Data;
 @Builder
 public class LoginResponseDto {
   private String username;
-  private String role;
+  private List<String> roles;
   private int employeeId;
 }

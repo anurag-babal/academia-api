@@ -15,22 +15,23 @@ import lombok.Data;
 public class User implements UserDetails {
     private String username;
     private String password;
-    private Role role;
+    private List<Role> roles;
     private int employeeId;
+    private boolean enabled;
 
     @Override
     public String getUsername() {
-        return username;
+        return this.username;
     }
 
     @Override
     public String getPassword() {
-        return password;
+        return this.password;
     }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {
-        return List.of(new SimpleGrantedAuthority(role.toString()));
+        return roles.stream().map(role -> new SimpleGrantedAuthority(role.toString())).toList();
     }
 
     @Override
@@ -50,6 +51,6 @@ public class User implements UserDetails {
 
     @Override
     public boolean isEnabled() {
-        return true;
+        return this.enabled;
     }
 }
