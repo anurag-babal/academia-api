@@ -10,5 +10,4 @@ import lombok.Data;
 public class LoginResponseDto {
   private String username;
   private List<String> roles;
-  private int employeeId;
 }

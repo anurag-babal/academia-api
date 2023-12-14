@@ -15,9 +15,8 @@ import lombok.Data;
 public class User implements UserDetails {
     private String username;
     private String password;
-    private List<Role> roles;
-    private int employeeId;
     private boolean enabled;
+    private List<Role> roles;
 
     @Override
     public String getUsername() {

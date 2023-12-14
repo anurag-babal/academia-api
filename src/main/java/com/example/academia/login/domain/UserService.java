@@ -1,9 +1,11 @@
 package com.example.academia.login.domain;
 
-import org.springframework.security.core.userdetails.UserDetailsService;
+import com.example.academia.login.dto.LoginRequestDto;
 
-public interface UserService extends UserDetailsService {
+public interface UserService {
   public User getUserByUsername(String username);
 
   public User addUser(User user);
+
+  public String generateToken(LoginRequestDto loginRequestDto);
 }
