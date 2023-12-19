@@ -30,8 +30,9 @@ public class SecurityConfig {
     http.requiresChannel(channel -> channel.anyRequest().requiresSecure());
 
     http.authorizeHttpRequests(configurer -> configurer
-        .requestMatchers("/api/v1/authenticate").permitAll()
+        .requestMatchers("/api/v1/authenticate", "/api/v1/register").permitAll()
         .requestMatchers("/api/v1/employees/**").hasRole("EMPLOYEE")
+        .requestMatchers("/api/v1/students/**").hasRole("STUDENT")
         .anyRequest().authenticated());
 
     http.authenticationProvider(authenticationProvider);

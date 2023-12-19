@@ -15,6 +15,7 @@ import lombok.RequiredArgsConstructor;
 @RequiredArgsConstructor
 public class UserRepository {
   private final UserEntityDao userEntityDao;
+  private final RoleEntityDao roleEntityDao;
 
   public User getUserByUsername(String username) {
     return mapToDomainUser(getUserEntityByUsername(username));
@@ -31,6 +32,12 @@ public class UserRepository {
         .orElseThrow(() -> new EntityNotFoundException("Invalid username."));
   }
 
+  private RoleEntity findRoleEntityByRole(Role role) {
+    String name = role.toString();
+    return roleEntityDao.findByName(name)
+        .orElseThrow(() -> new EntityNotFoundException("Role not found with name: " + name));
+  }
+
   private User mapToDomainUser(UserEntity entity) {
     return User.builder()
         .username(entity.getUsername())
@@ -41,7 +48,13 @@ public class UserRepository {
   }
 
   private UserEntity mapToEntityUser(User user) {
-    return null;
+    UserEntity userEntity = new UserEntity();
+    userEntity.setUsername(user.getUsername());
+    userEntity.setPassword(user.getPassword());
+    userEntity.setEnabled(true);
+    userEntity.setRoleEntities(user.getRoles().stream().map(this::findRoleEntityByRole).toList());
+
+    return userEntity;
   }
 
   private Role mapToDomainRole(RoleEntity entity) {

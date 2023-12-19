@@ -2,11 +2,16 @@ POST https://localhost:8443/api/v1/authenticate
 content-type: application/json
 
 {
-    "username": "john",
-    "password": "fun123"
+    "username": "aarush",
+    "password": "pass"
 }
 
 ###
 
 GET https://localhost:8443/api/test
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwicm9sZXMiOlsiUk9MRV9FTVBMT1lFRSJdLCJpYXQiOjE3MDI5OTE5OTYsImV4cCI6MTcwMzA3ODM5Nn0.SpRXzm-U1ZH0OGw6Gg-Jm3DwiJfGeP6aYnYXLiClDs4
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYXJ1c2giLCJyb2xlcyI6W10sImlhdCI6MTcwMzAxNDMzOCwiZXhwIjoxNzAzMTAwNzM4fQ.DgNjjVZy5YxMSM5bCLr8H-miClLsvUSuzsAr-pylz10
+
+###
+
+GET https://localhost:8443/api/v1/students
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWciLCJyb2xlcyI6WyJTVFVERU5UIl0sImlhdCI6MTcwMzAwODQwMiwiZXhwIjoxNzAzMDk0ODAyfQ.-YBWHYvgUWx7sAiOOAqxzmmycJYi5sRF7VCAnvYAvJs

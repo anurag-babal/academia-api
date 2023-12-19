@@ -11,7 +11,6 @@ import com.example.academia.core.config.JwtService;
 import com.example.academia.login.data.UserRepository;
 import com.example.academia.login.domain.User;
 import com.example.academia.login.domain.UserService;
-import com.example.academia.login.dto.LoginRequestDto;
 
 import lombok.RequiredArgsConstructor;
 
@@ -35,11 +34,11 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
-  public String generateToken(LoginRequestDto loginRequestDto) {
+  public String generateToken(User user) {
     Authentication authentication = authenticationManager.authenticate(
         new UsernamePasswordAuthenticationToken(
-            loginRequestDto.getUsername(), 
-            loginRequestDto.getPassword())
+            user.getUsername(), 
+            user.getPassword())
         );
     SecurityContextHolder.getContext().setAuthentication(authentication);
     return jwtService.generateToken(authentication);

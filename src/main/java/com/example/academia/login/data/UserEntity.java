@@ -33,7 +33,7 @@ public class UserEntity {
   private String password;
 
   @Column(name = "enabled")
-  private boolean enabled = true;
+  private boolean enabled;
 
   @ManyToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
   @JoinTable(

@@ -7,11 +7,11 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
-import lombok.Getter;
+import lombok.Data;
 
 @Entity
 @Table(name = "role")
-@Getter
+@Data
 public class RoleEntity {
   @Id
   @GeneratedValue(strategy = GenerationType.IDENTITY)
