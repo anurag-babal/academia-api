@@ -112,3 +112,21 @@ insert into login(id, username, password, role, employee_id) values
 (3, "priya", "pass", "FACULTY", 2),
 (4, "rahul", "pass", "FACULTY", 3),
 (5, "user", "pass", "ACCOUNT", 5);
+
+INSERT INTO `user` (`username`,`password`,`enabled`) VALUES 
+('john','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
+('mary','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
+('susan','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1);
+
+INSERT INTO `role` (name) VALUES 
+('ROLE_EMPLOYEE'),
+('ROLE_MANAGER'),
+('ROLE_ADMIN');
+
+INSERT INTO `user_roles` (user_id,role_id) VALUES 
+(1, 1),
+(2, 1),
+(2, 2),
+(3, 1),
+(3, 2),
+(3, 3);

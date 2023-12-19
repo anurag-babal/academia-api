@@ -23,3 +23,7 @@ alter table specialisation_course add constraint fk_specialisation_course_course
 alter table course_schedule add constraint fk_course_schedule_course_id foreign key (course_id) references course(course_id);
 
 alter table placement add constraint fk_organisation_id foreign key (organisation_id) references organisation(id);
+
+alter table user_roles add constraint fk_user_id FOREIGN KEY (`user_id`) REFERENCES `user` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table user_roles add constraint fk_role_id FOREIGN KEY (`role_id`) REFERENCES `role` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION;

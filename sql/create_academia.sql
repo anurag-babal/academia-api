@@ -129,3 +129,24 @@ create table login(
     employee_id int not null unique,
     constraint pk_login primary key (id)
 );
+
+CREATE TABLE user (
+  id int NOT NULL AUTO_INCREMENT,
+  username varchar(50) NOT NULL unique,
+  password char(100) NOT NULL,
+  enabled tinyint NOT NULL,  
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE role (
+  id int NOT NULL AUTO_INCREMENT,
+  name varchar(50) DEFAULT NULL,
+  PRIMARY KEY (id)
+);
+
+CREATE TABLE user_roles (
+  user_id int NOT NULL,
+  role_id int NOT NULL,
+  
+  PRIMARY KEY (user_id, role_id)
+);
