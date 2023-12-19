@@ -23,6 +23,12 @@ public class SecurityConfig {
     // Disable Cross Site Request Forgery (CSRF)
     http.csrf(csrf -> csrf.disable());
 
+    // Disable Cross-Origin Resource Sharing (CORS)
+    http.cors(cors -> cors.disable());
+
+    // Enable SSL
+    http.requiresChannel(channel -> channel.anyRequest().requiresSecure());
+
     http.authorizeHttpRequests(configurer -> configurer
         .requestMatchers("/api/v1/authenticate").permitAll()
         .requestMatchers("/api/v1/employees/**").hasRole("EMPLOYEE")

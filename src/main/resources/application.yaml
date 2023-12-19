@@ -10,9 +10,16 @@ spring:
   main:
     banner-mode: off
 
+server:
+  port: 8443
+  ssl:
+    key-store: classpath:academia.p12
+    key-store-password: password
+    key-password: password
+
 logging:
   level:
-    root: warn
+    root: info
     org:
       springframework:
         security: DEBUG
