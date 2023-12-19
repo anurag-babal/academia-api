@@ -9,4 +9,4 @@ content-type: application/json
 ###
 
 GET https://localhost:8443/api/test
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwicm9sZXMiOlsiUk9MRV9FTVBMT1lFRSJdLCJpYXQiOjE3MDI5ODk5OTMsImV4cCI6MTcwMzA3NjM5M30.o03SHoia-TAyV11WxJwfuXReo5jdJt_POARpdxwt3mg
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huIiwicm9sZXMiOlsiUk9MRV9FTVBMT1lFRSJdLCJpYXQiOjE3MDI5OTE5OTYsImV4cCI6MTcwMzA3ODM5Nn0.SpRXzm-U1ZH0OGw6Gg-Jm3DwiJfGeP6aYnYXLiClDs4

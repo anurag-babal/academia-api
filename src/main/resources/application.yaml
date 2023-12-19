@@ -28,5 +28,5 @@ logging:
 
 academia:
   jwt:
-    secret: ======================academia=spring===========================
+    secret: 52b1f28dbb6eff12e9e625f05df04a96bdae0190137c8b4e7507d3d283734577
     expirationInMs: 86400
