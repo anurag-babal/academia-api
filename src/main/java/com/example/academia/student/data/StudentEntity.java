@@ -17,11 +17,17 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotNull;
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "student")
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class StudentEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,7 +35,7 @@ public class StudentEntity {
     private int id;
 
     @NotNull
-    @Column(name = "roll_number", length = 9, nullable = false, unique = true)
+    @Column(name = "roll_number", length = 15, nullable = false, unique = true)
     private String rollNumber;
 
     @NotNull
@@ -46,6 +52,7 @@ public class StudentEntity {
     @Column(name = "photograph_path", length = 50)    
     private String photographPath;
 
+    @Builder.Default
     @NotNull
     @Column(name = "cgpa", nullable = false, precision=3, scale=2)
     private BigDecimal cgpa = new BigDecimal(0.0);
@@ -54,8 +61,8 @@ public class StudentEntity {
     @Column(name = "total_credits", nullable = false)
     private int totalCredits;
 
-    @Column(name = "graduation_year", length = 4)
-    private String graduationYear;
+    @Column(name = "graduation_year")
+    private int graduationYear;
     
     @ManyToOne()
     @JoinColumn(name = "domain_id")

@@ -14,6 +14,6 @@ public class Student {
     private String photographPath;
     private double cgpa;
     private int totalCredits;
-    private String graduationYear;
+    private int graduationYear;
     private int domainId;
 }

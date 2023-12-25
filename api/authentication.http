@@ -2,8 +2,8 @@ POST https://localhost:8443/api/v1/authenticate
 content-type: application/json
 
 {
-    "username": "aarush",
-    "password": "pass"
+    "username": "admin",
+    "password": "admin"
 }
 
 ###
@@ -14,4 +14,4 @@ Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhYXJ1c2giLCJyb2xlcyI6W10sI
 ###
 
 GET https://localhost:8443/api/v1/students
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbnVyYWciLCJyb2xlcyI6WyJTVFVERU5UIl0sImlhdCI6MTcwMzAwODQwMiwiZXhwIjoxNzAzMDk0ODAyfQ.-YBWHYvgUWx7sAiOOAqxzmmycJYi5sRF7VCAnvYAvJs
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzAzNTA3NTAyLCJleHAiOjE3MDM1OTM5MDJ9.hqwg3W2E7aSyscuGyt5EKSWQqrKk1AlVW6Ac6tRG4sg

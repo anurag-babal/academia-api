@@ -5,7 +5,7 @@ USE academia;
 DROP TABLE IF EXISTS employee, student, course, student_course, specialisation, specialisation_course, course_schedule, department, placement, organisation, grade, domain;
 
 create table employee(
-	employee_id int,
+	employee_id int NOT NULL AUTO_INCREMENT,
     first_name varchar(30) not null,
     last_name varchar(30),
     email varchar(50) unique not null,
@@ -16,15 +16,15 @@ create table employee(
 );
 
 create table student(
-	student_id int,
-    roll_number varchar(9) unique not null,
+	student_id int NOT NULL AUTO_INCREMENT,
+    roll_number varchar(15) unique not null,
     first_name varchar(30) not null,
     last_name varchar(30),
     email varchar(50) unique not null,
     photograph_path varchar(50),
     cgpa decimal(3,2) not null default 0.0,
     total_credits int not null,
-    graduation_year varchar(4),
+    graduation_year int,
     domain_id int,
     specialisation_id int,
     placement_id int,
@@ -32,7 +32,7 @@ create table student(
 );
 
 create table course(
-	course_id int,
+	course_id int NOT NULL AUTO_INCREMENT,
     course_code varchar(5) unique not null,
     `name` varchar(30) not null,
     `description` varchar(100),
@@ -45,7 +45,7 @@ create table course(
 );
 
 create table student_course(
-	id int,
+	id int NOT NULL AUTO_INCREMENT,
     student_id int,
     course_id int,
     grade_id int,
@@ -54,7 +54,7 @@ create table student_course(
 );
 
 create table grade(
-	grade_id int,
+	grade_id int NOT NULL AUTO_INCREMENT,
     letter_grade varchar(2) unique,
     grade_points decimal(3,2) not null,
     `comment` varchar(30),
@@ -62,7 +62,7 @@ create table grade(
 );
 
 create table specialisation(
-	specialisation_id int,
+	specialisation_id int NOT NULL AUTO_INCREMENT,
     `code` varchar(10) unique not null,
     `name` varchar(30) not null,
     `description` varchar(100),
@@ -72,14 +72,14 @@ create table specialisation(
 );
 
 create table specialisation_course(
-	id int,
+	id int NOT NULL AUTO_INCREMENT,
     specialisation_id int,
     course_id int,
     constraint pk_specialisation_course primary key (id)
 );
 
 create table course_schedule(
-	id int,
+	id int NOT NULL AUTO_INCREMENT,
     course_id int,
     `time` varchar(5) not null,
     `day` varchar(10) not null,
@@ -89,14 +89,14 @@ create table course_schedule(
 );
 
 create table department(
-	department_id int,
+	department_id int NOT NULL AUTO_INCREMENT,
     `name` varchar(30) not null,
     capacity int not null,
     constraint pk_department primary key (department_id)
 );
 
 create table placement(
-	id int,
+	id int NOT NULL AUTO_INCREMENT,
     organisation_id int,
     `profile` varchar(30) not null,
     `description` varchar(50),
@@ -106,16 +106,16 @@ create table placement(
 );
 
 create table organisation(
-	id int,
+	id int NOT NULL AUTO_INCREMENT,
     `name` varchar(30) not null,
     address varchar(200),
     constraint pk_organisation primary key (id)
 );
 
 create table domain(
-	domain_id int,
-    program varchar(10) not null,
-    batch varchar(4) not null,
+	domain_id int NOT NULL AUTO_INCREMENT,
+    program varchar(20) not null,
+    batch varchar(10) not null,
     capacity int not null,
     qualification varchar(30),
     constraint pk_domain primary key (domain_id)

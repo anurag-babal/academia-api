@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import com.example.academia.course.data.entity.DomainEntity;
 import com.example.academia.course.domain.model.Course;
 import com.example.academia.course.domain.model.CourseSchedule;
 import com.example.academia.course.domain.model.Domain;
@@ -17,4 +18,5 @@ public interface CourseRepository {
     public List<Specialisation> getSpecialisationsByCourseId(int courseId);
     public List<Domain> getAllDomains();
     public Domain getDomainById(int id);
+    public DomainEntity getDomainEntityById(int id);
 }

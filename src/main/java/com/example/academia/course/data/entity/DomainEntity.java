@@ -19,11 +19,11 @@ public class DomainEntity {
     private int id;
 
     @NotNull
-    @Column(name = "program", length = 10, nullable = false)
+    @Column(name = "program", length = 20, nullable = false)
     private String program;
 
     @NotNull
-    @Column(name = "batch", length = 4, nullable = false)
+    @Column(name = "batch", length = 10, nullable = false)
     private String batch;
 
     @NotNull

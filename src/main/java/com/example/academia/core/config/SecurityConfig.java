@@ -32,7 +32,7 @@ public class SecurityConfig {
     http.authorizeHttpRequests(configurer -> configurer
         .requestMatchers("/api/v1/authenticate", "/api/v1/register").permitAll()
         .requestMatchers("/api/v1/employees/**").hasRole("EMPLOYEE")
-        .requestMatchers("/api/v1/students/**").hasRole("STUDENT")
+        .requestMatchers("/api/v1/students/**").hasAnyRole("ADMIN", "STUDENT")
         .anyRequest().authenticated());
 
     http.authenticationProvider(authenticationProvider);

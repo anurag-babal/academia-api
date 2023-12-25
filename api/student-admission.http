@@ -1,0 +1,12 @@
+POST https://localhost:8443/api/v1/students
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsInJvbGVzIjpbIlJPTEVfQURNSU4iXSwiaWF0IjoxNzAzNTA3NTAyLCJleHAiOjE3MDM1OTM5MDJ9.hqwg3W2E7aSyscuGyt5EKSWQqrKk1AlVW6Ac6tRG4sg
+
+{
+  "fname": "Test",
+  "lname": "User",
+  "email": "ghi@abc.com",
+  "photoPath": null,
+  "graduationYear": 2028,
+  "domainId": 3
+}

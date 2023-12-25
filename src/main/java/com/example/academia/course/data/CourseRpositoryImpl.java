@@ -66,7 +66,8 @@ public class CourseRpositoryImpl implements CourseRepository {
         return mapToDomainDomain(getDomainEntityById(id));
     }
 
-    private DomainEntity getDomainEntityById(int id) {
+    @Override
+    public DomainEntity getDomainEntityById(int id) {
         return domainEntityDao.findById(id)
                 .orElseThrow(() -> new EntityNotFoundException("Domain not found with id: " + id));
     }

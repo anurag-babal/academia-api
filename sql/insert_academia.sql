@@ -40,13 +40,11 @@ insert into grade(grade_id, letter_grade, grade_points, comment) values
 (11, 'F', 0.0, null);
 
 insert into domain(domain_id, program, batch, capacity, qualification) values
-(1, 'CSE', '2023', 150, null),
-(2, 'ECE', '2023', 30, null),
-(3, 'IT', '2023', 120, null),
-(4, 'CE', '2023', 100, null),
-(5, 'ME', '2023', 80, null),
-(6, 'EE', '2023', 60, null),
-(7, 'AE', '2023', 40, null);
+(1, 'M.Tech', 'CSE', 150, null),
+(2, 'M.Tech', 'ECE', 30, null),
+(3, 'IM.Tech', 'CSE', 250, null),
+(4, 'IM.Tech', 'ECE', 100, null),
+(5, 'MS', 'CSE', 20, null);
 
 insert into specialisation(specialisation_id, code, name, description, year, credits_required) values
 (1, 'AI', 'Artificial Intelligence', null, 1, 8),
@@ -83,13 +81,13 @@ insert into placement(id, organisation_id, profile, description, intake, minimum
 (2, 2, 'SE', 'Software Engineer', 10, 2.6);
 
 insert into student(student_id, roll_number, first_name, last_name, email, photograph_path, cgpa, total_credits, graduation_year, domain_id, specialisation_id, placement_id) values
-(1, 'MT2023102', 'Anurag', 'Babal', 'abc@gmail.com', null, 2.84, 16, '2025', 1, 2, null),
-(2, 'MT2023123', 'Souvik', null, 'def@gmail.com', null, 3.24, 16, '2025', 1, 1, 2),
-(3, 'MT2023104', 'Rahul', 'Kumar', 'mno@gmail.com', null, 2.98, 8, '2025', 3, 3, null),
-(4, 'MT2023105', 'Anjali', 'Singh', 'pqr@gmail.com', null, 3.21, 4, '2024', 1, 2, null),
-(5, 'MT2023106', 'Vikas', 'Patel', 'stu@gmail.com', null, 3.95, 18, '2024', 2, 1, null),
-(6, 'MT2023107', 'Monika', 'Joshi', 'abc1@gmail.com', null, 3.52, 14, '2024', 3, 3, null),
-(7, 'MT2023103', 'Priya', 'Sharma', 'xyz@gmail.com', null, 3.67, 12, '2025', 2, 1, null);
+(1, 'MT2022001', 'Anjali', 'Singh', 'pqr@gmail.com', null, 3.21, 4, 2024, 1, 2, null),
+(2, 'MT2022050', 'Vikas', 'Patel', 'stu@gmail.com', null, 3.95, 18, 2024, 2, 1, null),
+(3, 'MT2022107', 'Monika', 'Joshi', 'abc1@gmail.com', null, 3.52, 14, 2024, 3, 3, null),
+(4, 'MT2023102', 'Anurag', 'Babal', 'abc@gmail.com', null, 2.84, 16, 2025, 1, 2, null),
+(5, 'MT2023104', 'Rahul', 'Kumar', 'mno@gmail.com', null, 2.98, 8, 2025, 3, 3, null),
+(6, 'MT2023110', 'Priya', 'Sharma', 'xyz@gmail.com', null, 3.67, 12, 2025, 2, 1, null),
+(7, 'MT2023123', 'Souvik', null, 'def@gmail.com', null, 3.24, 16, 2025, 1, 1, 2);
 
 insert into student_course(id, student_id, course_id, grade_id, comments) values
 (1, 1, 1, 1, 'Excellent'),
@@ -106,20 +104,22 @@ insert into student_course(id, student_id, course_id, grade_id, comments) values
 (15, 5, 2, 4, 'Needs Improvement'),
 (17, 6, 5, 6, 'Good');
 
-INSERT INTO `user` (username, `password`, enabled) VALUES 
-('john','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
-('mary','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1),
-('susan','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K',1);
+insert into `user` (username, `password`, enabled) VALUES 
+('john','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K', 1),
+('mary','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K', 1),
+('susan','$2a$04$eFytJDGtjbThXa80FyOOBuFdK2IwjyWefYkMpiBEFlpBwDH.5PM0K', 1),
+('admin', '$2a$10$hjqz9QdXfC2Jr5FM.AKvcOqy/x7FU.M9hLQQlb8Nw0eDB42fPWcTC', 1);
 
-INSERT INTO `role` (`name`) VALUES 
+insert into `role` (`name`) VALUES 
 ('ROLE_FACULTY'),
 ('ROLE_STUDENT'),
 ('ROLE_ADMIN');
 
-INSERT INTO user_roles (user_id, role_id) VALUES 
+insert into user_roles (user_id, role_id) VALUES 
 (1, 1),
 (2, 1),
 (2, 2),
 (3, 1),
 (3, 2),
-(3, 3);
+(3, 3),
+(4, 3);
