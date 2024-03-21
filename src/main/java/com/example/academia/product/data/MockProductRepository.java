@@ -1,13 +1,12 @@
 package com.example.academia.product.data;
 
-import java.util.ArrayList;
-import java.util.List;
-
+import com.example.academia.product.domain.model.Product;
+import com.example.academia.product.domain.repository.ProductRepository;
 import org.springframework.stereotype.Component;
 import org.springframework.util.ObjectUtils;
 
-import com.example.academia.product.domain.model.Product;
-import com.example.academia.product.domain.repository.ProductRepository;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 public class MockProductRepository implements ProductRepository {

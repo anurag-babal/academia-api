@@ -1,11 +1,10 @@
 package com.example.academia.placement.data.dao;
 
-import java.util.List;
-
+import com.example.academia.placement.data.entity.PlacementEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.academia.placement.data.entity.PlacementEntity;
+import java.util.List;
 
 @Repository
 public interface PlacementEntityDao extends JpaRepository<PlacementEntity, Integer> {

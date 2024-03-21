@@ -1,7 +1,6 @@
 package com.example.academia.placement.domain.model;
 
 import com.example.academia.placement.domain.AcceptanceEnum;
-
 import lombok.Builder;
 import lombok.Data;
 

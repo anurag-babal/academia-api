@@ -1,11 +1,10 @@
 package com.example.academia.course.data.dao;
 
-import java.util.List;
-
+import com.example.academia.course.data.entity.CourseScheduleEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.academia.course.data.entity.CourseScheduleEntity;
+import java.util.List;
 
 @Repository
 public interface CourseScheduleEntityDao extends JpaRepository<CourseScheduleEntity, Integer> {

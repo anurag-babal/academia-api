@@ -1,14 +1,5 @@
 package com.example.academia.course;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.data.domain.Pageable;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.example.academia.core.ResponseBuilder;
 import com.example.academia.core.ResponseDto;
 import com.example.academia.course.domain.CourseService;
@@ -16,8 +7,15 @@ import com.example.academia.course.domain.model.Course;
 import com.example.academia.course.dto.CourseScheduleDto;
 import com.example.academia.employee.domain.EmployeeService;
 import com.example.academia.employee.domain.model.Employee;
-
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")

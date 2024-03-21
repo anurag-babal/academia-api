@@ -1,14 +1,12 @@
 package com.example.academia.employee.service;
 
-import java.util.List;
-
-import org.springframework.stereotype.Service;
-
 import com.example.academia.employee.domain.EmployeeRepository;
 import com.example.academia.employee.domain.EmployeeService;
 import com.example.academia.employee.domain.model.Employee;
-
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor

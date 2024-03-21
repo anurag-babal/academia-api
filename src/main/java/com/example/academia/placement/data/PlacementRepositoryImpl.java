@@ -1,30 +1,18 @@
 package com.example.academia.placement.data;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.stereotype.Component;
-
-import com.example.academia.placement.data.dao.AlumniEntityDao;
-import com.example.academia.placement.data.dao.AlumniOrganisationEntityDao;
-import com.example.academia.placement.data.dao.OrganisationEntityDao;
-import com.example.academia.placement.data.dao.PlacementEntityDao;
-import com.example.academia.placement.data.dao.PlacementFilterEntityDao;
-import com.example.academia.placement.data.dao.PlacementStudentEntityDao;
-import com.example.academia.placement.data.entity.AlumniEntity;
-import com.example.academia.placement.data.entity.AlumniOrganisationEntity;
-import com.example.academia.placement.data.entity.OrganisationEntity;
-import com.example.academia.placement.data.entity.PlacementEntity;
-import com.example.academia.placement.data.entity.PlacementFilterEntity;
-import com.example.academia.placement.data.entity.PlacementStudentEntity;
+import com.example.academia.placement.data.dao.*;
+import com.example.academia.placement.data.entity.*;
 import com.example.academia.placement.domain.PlacementRepository;
 import com.example.academia.placement.domain.model.Alumni;
 import com.example.academia.placement.domain.model.AlumniOrganisation;
 import com.example.academia.placement.domain.model.Organisation;
 import com.example.academia.placement.domain.model.PlacementStudent;
-
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Component
 @RequiredArgsConstructor

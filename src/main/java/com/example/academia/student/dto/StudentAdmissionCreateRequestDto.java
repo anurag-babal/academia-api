@@ -7,16 +7,16 @@ import lombok.Data;
 
 @Data
 public class StudentAdmissionCreateRequestDto {
-  @NotBlank
-  private String fname;
-  private String lname;
+    @NotBlank
+    private String fname;
+    private String lname;
 
-  @Email
-  private String email;
+    @Email
+    private String email;
 
-  private String photoPath;
-  private int graduationYear;
-  
-  @NotNull
-  private int domainId;
+    private String photoPath;
+    private int graduationYear;
+
+    @NotNull
+    private int domainId;
 }

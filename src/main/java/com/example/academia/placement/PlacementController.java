@@ -1,15 +1,5 @@
 package com.example.academia.placement;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
-
 import com.example.academia.core.ResponseBuilder;
 import com.example.academia.core.ResponseDto;
 import com.example.academia.course.domain.CourseService;
@@ -24,8 +14,11 @@ import com.example.academia.placement.dto.PlacementStudentHistoryDto;
 import com.example.academia.placement.dto.WorkingAlumniDto;
 import com.example.academia.student.domain.Student;
 import com.example.academia.student.domain.StudentService;
-
 import lombok.RequiredArgsConstructor;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")

@@ -1,14 +1,18 @@
 package com.example.academia.student.domain;
 
-import java.util.Optional;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
+import java.util.Optional;
+
 public interface StudentRepository {
-    public Page<Student> getAllStudents(Pageable pageable);
-    public Student getStudentById(int id);
-    public Page<Student> getAllStudentsForCourseId(int courseId, Pageable pageable);
-    public Student createStudentAdmission(Student student);
-    public Optional<Student> getLastStudentForGraduationYear(int graduationYear);
+    Page<Student> getAllStudents(Pageable pageable);
+
+    Student getStudentById(int id);
+
+    Page<Student> getAllStudentsForCourseId(int courseId, Pageable pageable);
+
+    Student createStudentAdmission(Student student);
+
+    Optional<Student> getLastStudentForGraduationYear(int graduationYear);
 }

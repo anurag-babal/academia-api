@@ -6,8 +6,8 @@ import lombok.Data;
 @Data
 @Builder
 public class WorkingAlumniDto {
-  private String name;
-  private String position;
-  private String joiningDate;
-  private String email;
+    private String name;
+    private String position;
+    private String joiningDate;
+    private String email;
 }

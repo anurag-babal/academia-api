@@ -4,7 +4,6 @@ import com.example.academia.placement.domain.model.Organisation;
 import com.example.academia.placement.domain.model.Placement;
 import com.example.academia.placement.domain.model.PlacementStudent;
 import com.example.academia.student.domain.Student;
-
 import lombok.Builder;
 import lombok.Data;
 

@@ -1,19 +1,17 @@
 package com.example.academia.course;
 
-import java.util.List;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-
 import com.example.academia.course.domain.CourseRepository;
 import com.example.academia.course.domain.CourseService;
 import com.example.academia.course.domain.model.Course;
 import com.example.academia.course.domain.model.CourseSchedule;
 import com.example.academia.course.domain.model.Domain;
 import com.example.academia.course.domain.model.Specialisation;
-
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -42,7 +40,7 @@ public class CourseServiceImpl implements CourseService {
                 .flatMap(course -> getCourseSchedulesByCourseId(course.getCourseId()).stream()).toList();
         return courseSchedules;
     }
-    
+
     @Override
     public List<Specialisation> getSpecialisationsByCourseId(int courseId) {
         return courseRepository.getSpecialisationsByCourseId(courseId);

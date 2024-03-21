@@ -1,11 +1,5 @@
 package com.example.academia.placement;
 
-import java.util.ArrayList;
-import java.util.List;
-
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Service;
-
 import com.example.academia.placement.domain.PlacementRepository;
 import com.example.academia.placement.domain.PlacementService;
 import com.example.academia.placement.domain.model.Alumni;
@@ -14,8 +8,12 @@ import com.example.academia.placement.domain.model.Organisation;
 import com.example.academia.placement.domain.model.PlacementStudent;
 import com.example.academia.student.domain.Student;
 import com.example.academia.student.domain.StudentRepository;
-
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Service;
+
+import java.util.ArrayList;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor

@@ -1,21 +1,11 @@
 package com.example.academia.placement.data.entity;
 
-import java.time.LocalDate;
-
 import com.example.academia.placement.domain.AcceptanceEnum;
 import com.example.academia.student.data.StudentEntity;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "placement_student")

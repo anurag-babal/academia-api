@@ -1,28 +1,22 @@
 package com.example.academia.course.data;
 
-import java.util.List;
-
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
-import org.springframework.stereotype.Component;
-
 import com.example.academia.course.data.dao.CourseEntityDao;
 import com.example.academia.course.data.dao.CourseScheduleEntityDao;
 import com.example.academia.course.data.dao.DomainEntityDao;
 import com.example.academia.course.data.dao.SpecialisationCourseEntityDao;
-import com.example.academia.course.data.entity.CourseEntity;
-import com.example.academia.course.data.entity.CourseScheduleEntity;
-import com.example.academia.course.data.entity.DomainEntity;
-import com.example.academia.course.data.entity.SpecialisationCourseEntity;
-import com.example.academia.course.data.entity.SpecialisationEntity;
+import com.example.academia.course.data.entity.*;
 import com.example.academia.course.domain.CourseRepository;
 import com.example.academia.course.domain.model.Course;
 import com.example.academia.course.domain.model.CourseSchedule;
 import com.example.academia.course.domain.model.Domain;
 import com.example.academia.course.domain.model.Specialisation;
-
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 @RequiredArgsConstructor

@@ -4,7 +4,7 @@ import org.springframework.http.HttpStatus;
 
 public class ResponseBuilder {
     public static ResponseDto createResponse(Object obj) {
-        if (obj == null) 
+        if (obj == null)
             return createNullResponse();
         else
             return createSingleResponse(obj);

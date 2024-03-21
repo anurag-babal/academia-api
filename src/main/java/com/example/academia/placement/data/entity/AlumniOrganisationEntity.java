@@ -1,17 +1,10 @@
 package com.example.academia.placement.data.entity;
 
-import java.time.LocalDate;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import jakarta.validation.constraints.NotNull;
 import lombok.Getter;
+
+import java.time.LocalDate;
 
 @Entity
 @Table(name = "alumni_organisation")
@@ -30,7 +23,7 @@ public class AlumniOrganisationEntity {
 
     @Column(name = "leaving_date")
     private LocalDate leavingDate;
-    
+
     @ManyToOne
     @JoinColumn(name = "organisation_id")
     private OrganisationEntity organisationEntity;

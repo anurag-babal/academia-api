@@ -1,16 +1,14 @@
 package com.example.academia.employee.data;
 
-import java.util.List;
-
-import org.springframework.stereotype.Component;
-
 import com.example.academia.employee.data.dao.EmployeeEntityDao;
 import com.example.academia.employee.data.entity.EmployeeEntity;
 import com.example.academia.employee.domain.EmployeeRepository;
 import com.example.academia.employee.domain.model.Employee;
-
 import jakarta.persistence.EntityNotFoundException;
 import lombok.RequiredArgsConstructor;
+import org.springframework.stereotype.Component;
+
+import java.util.List;
 
 @Component
 @RequiredArgsConstructor

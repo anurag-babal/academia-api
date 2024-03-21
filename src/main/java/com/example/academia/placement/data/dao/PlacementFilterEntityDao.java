@@ -1,13 +1,12 @@
 package com.example.academia.placement.data.dao;
 
-import java.util.List;
-
+import com.example.academia.placement.data.entity.PlacementFilterEntity;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.example.academia.placement.data.entity.PlacementFilterEntity;
+import java.util.List;
 
 @Repository
 public interface PlacementFilterEntityDao extends JpaRepository<PlacementFilterEntity, Integer> {
-  public List<PlacementFilterEntity> findAllByDomainEntityId(int id);
+    List<PlacementFilterEntity> findAllByDomainEntityId(int id);
 }

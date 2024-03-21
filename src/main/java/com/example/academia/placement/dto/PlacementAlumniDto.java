@@ -1,12 +1,11 @@
 package com.example.academia.placement.dto;
 
-import java.util.List;
-
 import com.example.academia.placement.domain.model.Alumni;
 import com.example.academia.placement.domain.model.Placement;
-
 import lombok.Builder;
 import lombok.Data;
+
+import java.util.List;
 
 @Data
 @Builder

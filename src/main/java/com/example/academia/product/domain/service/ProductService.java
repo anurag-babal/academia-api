@@ -1,10 +1,11 @@
 package com.example.academia.product.domain.service;
 
-import java.util.List;
-
 import com.example.academia.product.domain.model.Product;
 
+import java.util.List;
+
 public interface ProductService {
-    public List<Product> getAllProducts();
-    public Product getProductById(int id);
+    List<Product> getAllProducts();
+
+    Product getProductById(int id);
 }

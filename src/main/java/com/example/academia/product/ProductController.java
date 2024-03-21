@@ -1,16 +1,14 @@
 package com.example.academia.product;
 
-import java.util.List;
-
+import com.example.academia.product.domain.model.Product;
+import com.example.academia.product.domain.service.ProductService;
+import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.example.academia.product.domain.model.Product;
-import com.example.academia.product.domain.service.ProductService;
-
-import lombok.RequiredArgsConstructor;
+import java.util.List;
 
 @RestController
 @RequestMapping("/api")
